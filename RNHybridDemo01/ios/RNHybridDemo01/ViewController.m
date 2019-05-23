@@ -9,11 +9,18 @@
 #import "ViewController.h"
 #import <React/RCTRootView.h>
 #import "RNPageViewController.h"
+#import "RNPagePreloadManager.h"
 @interface ViewController ()
 
 @end
 
+static NSString * const kPreloadViewKey = @"myView";
+
 @implementation ViewController
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [[RNPagePreloadManager defaultManager] preloadViewForRNModule:@"RNPageTwo" initialProperties:@{@"name": @"xiaoming", @"age": @10, @"id": @"007"} cacheKey:kPreloadViewKey];
+}
 
 - (IBAction)toRNPageOne:(id)sender {
     UIViewController *viewController = [[UIViewController alloc] init];
@@ -38,6 +45,17 @@
 - (IBAction)toRNPageThree:(id)sender {
     UIViewController *viewController = [[RNPageViewController alloc] init];
     [self.navigationController pushViewController:viewController animated:YES];
+}
+
+- (IBAction)preloadRNPage:(id)sender {
+    UIViewController *viewController = [[UIViewController alloc] init];
+    UIView *rootView = [[RNPagePreloadManager defaultManager] viewForKey:kPreloadViewKey];
+    viewController.view = rootView;
+    [self.navigationController pushViewController:viewController animated:YES];
+}
+
+- (void)dealloc {
+    [[RNPagePreloadManager defaultManager] removeView:kPreloadViewKey];
 }
 
 @end

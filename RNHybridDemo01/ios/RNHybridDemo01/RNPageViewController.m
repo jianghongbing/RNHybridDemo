@@ -21,9 +21,19 @@
 }
 RCT_EXPORT_MODULE()
 RCT_EXPORT_METHOD(goBack){
-    NSLog(@"dismiss...self:%@:%@", self, self.navigationController);
-    [self.navigationController popViewControllerAnimated:YES];
+    NSLog(@"self:%@:%@", self, self.navigationController);
+    UINavigationController *navigationController = (UINavigationController *)[UIApplication sharedApplication].delegate.window.rootViewController;
+    [navigationController popViewControllerAnimated:YES];
 }
+
+RCT_EXPORT_METHOD(rnButtonClicked:(NSInteger)count) {
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"点击了button" message:[NSString stringWithFormat:@"count:%ld", count] preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+    [alertController addAction:okAction];
+    [[UIApplication sharedApplication].delegate.window.rootViewController presentViewController:alertController animated:YES completion:nil];
+    
+}
+
 
 + (BOOL)requiresMainQueueSetup {
     return YES;
@@ -34,7 +44,6 @@ RCT_EXPORT_METHOD(goBack){
     [super viewDidLoad];
     self.navigationItem.title = @"RNPageThree";
     [self addRNPageThree];
-    NSLog(@"dismiss...self:%@:%@", self, self.navigationController);
 }
 
 - (void)addRNPageThree {
@@ -43,8 +52,7 @@ RCT_EXPORT_METHOD(goBack){
     self.view = view;
 }
 
-//- (void)goBack {
-//    [self.navigationController popViewControllerAnimated:YES];
-//}
-
+- (void)dealloc {
+    NSLog(@"RNPageViewController dealloc");
+}
 @end

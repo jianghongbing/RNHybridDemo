@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hqo-mD-Hb4">
-                                <rect key="frame" x="92.5" y="393" width="229" height="110"/>
+                                <rect key="frame" x="92.5" y="373" width="229" height="150"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rXp-QD-Wgb">
                                         <rect key="frame" x="0.0" y="0.0" width="229" height="30"/>
@@ -40,6 +40,13 @@
                                         <state key="normal" title="RN Page Call Native Method"/>
                                         <connections>
                                             <action selector="toRNPageThree:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WbA-Dz-OgC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l5e-J6-3BU">
+                                        <rect key="frame" x="0.0" y="120" width="229" height="30"/>
+                                        <state key="normal" title="Preload RN Page"/>
+                                        <connections>
+                                            <action selector="preloadRNPage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gfg-nR-Vau"/>
                                         </connections>
                                     </button>
                                 </subviews>

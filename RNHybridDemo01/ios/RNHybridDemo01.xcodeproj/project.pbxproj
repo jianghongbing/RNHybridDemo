@@ -15,6 +15,7 @@
 		CEC9D77022952919008EF467 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEC9D76E22952919008EF467 /* LaunchScreen.storyboard */; };
 		CEC9D77322952919008EF467 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC9D77222952919008EF467 /* main.m */; };
 		CEC9D7C922963367008EF467 /* RNPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC9D7C822963367008EF467 /* RNPageViewController.m */; };
+		CEC9D7CC22968CC4008EF467 /* RNPagePreloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC9D7CB22968CC4008EF467 /* RNPagePreloadManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		CEC9D77222952919008EF467 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CEC9D7C722963367008EF467 /* RNPageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNPageViewController.h; sourceTree = "<group>"; };
 		CEC9D7C822963367008EF467 /* RNPageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNPageViewController.m; sourceTree = "<group>"; };
+		CEC9D7CA22968CC4008EF467 /* RNPagePreloadManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNPagePreloadManager.h; sourceTree = "<group>"; };
+		CEC9D7CB22968CC4008EF467 /* RNPagePreloadManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNPagePreloadManager.m; sourceTree = "<group>"; };
 		FD899F43E593841DC2528265 /* Pods-RNHybridDemo01.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNHybridDemo01.debug.xcconfig"; path = "Target Support Files/Pods-RNHybridDemo01/Pods-RNHybridDemo01.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,6 +94,8 @@
 				CEC9D767229528EE008EF467 /* ViewController.m */,
 				CEC9D7C722963367008EF467 /* RNPageViewController.h */,
 				CEC9D7C822963367008EF467 /* RNPageViewController.m */,
+				CEC9D7CA22968CC4008EF467 /* RNPagePreloadManager.h */,
+				CEC9D7CB22968CC4008EF467 /* RNPagePreloadManager.m */,
 				CEC9D769229528EE008EF467 /* Main.storyboard */,
 				CEC9D76C22952919008EF467 /* Assets.xcassets */,
 				CEC9D76E22952919008EF467 /* LaunchScreen.storyboard */,
@@ -200,6 +205,7 @@
 				CEC9D7C922963367008EF467 /* RNPageViewController.m in Sources */,
 				CEC9D77322952919008EF467 /* main.m in Sources */,
 				CEC9D765229528EE008EF467 /* AppDelegate.m in Sources */,
+				CEC9D7CC22968CC4008EF467 /* RNPagePreloadManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
