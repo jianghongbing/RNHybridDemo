@@ -1,0 +1,3 @@
+rootProject.name = 'RNHybridDemo01'
+
+include ':app'
