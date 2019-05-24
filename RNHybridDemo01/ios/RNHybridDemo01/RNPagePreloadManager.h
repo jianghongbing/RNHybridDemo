@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)preloadViewForRNModule:(nonnull NSString *)RNModuleName initialProperties:(nullable NSDictionary *)initialProperty cacheKey:(NSString *)cacheKey;
 - (nullable UIView *)viewForKey:(NSString *)key;
 - (void)removeView:(nonnull NSString *)key;
+- (void)removAllPreloadView;
 @end
 
 NS_ASSUME_NONNULL_END

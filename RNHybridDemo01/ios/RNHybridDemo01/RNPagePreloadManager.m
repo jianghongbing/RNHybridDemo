@@ -50,6 +50,9 @@
 - (void)removeView:(NSString *)key {
     [_RNViewCache removeObjectForKey:key];
 }
+- (void)removAllPreloadView {
+    [_RNViewCache removeAllObjects];
+}
 
 #pragma mark RCTBridgeDelegate
 - (NSURL *)sourceURLForBridge:(RCTBridge *)bridge {
