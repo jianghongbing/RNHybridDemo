@@ -41,6 +41,7 @@
 		CEC9D81E22979611008EF467 /* RNVMyViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC9D81D22979611008EF467 /* RNVMyViewManager.m */; };
 		CEC9D8212297986E008EF467 /* MyView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC9D8202297986E008EF467 /* MyView.m */; };
 		CEC9D8242297C345008EF467 /* RCTConvert+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC9D8232297C345008EF467 /* RCTConvert+Color.m */; };
+		CEC9D85B2297EB85008EF467 /* RNUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC9D85A2297EB85008EF467 /* RNUserDefaults.m */; };
 		ED297163215061F000B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED297162215061F000B7C4FE /* JavaScriptCore.framework */; };
 		ED2971652150620600B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED2971642150620600B7C4FE /* JavaScriptCore.framework */; };
 /* End PBXBuildFile section */
@@ -354,6 +355,8 @@
 		CEC9D8202297986E008EF467 /* MyView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyView.m; sourceTree = "<group>"; };
 		CEC9D8222297C345008EF467 /* RCTConvert+Color.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RCTConvert+Color.h"; sourceTree = "<group>"; };
 		CEC9D8232297C345008EF467 /* RCTConvert+Color.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "RCTConvert+Color.m"; sourceTree = "<group>"; };
+		CEC9D8592297EB85008EF467 /* RNUserDefaults.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNUserDefaults.h; sourceTree = "<group>"; };
+		CEC9D85A2297EB85008EF467 /* RNUserDefaults.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNUserDefaults.m; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
@@ -630,6 +633,8 @@
 				CEC9D8202297986E008EF467 /* MyView.m */,
 				CEC9D8222297C345008EF467 /* RCTConvert+Color.h */,
 				CEC9D8232297C345008EF467 /* RCTConvert+Color.m */,
+				CEC9D8592297EB85008EF467 /* RNUserDefaults.h */,
+				CEC9D85A2297EB85008EF467 /* RNUserDefaults.m */,
 			);
 			name = MyView;
 			sourceTree = "<group>";
@@ -1149,6 +1154,7 @@
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				CEC9D81E22979611008EF467 /* RNVMyViewManager.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				CEC9D85B2297EB85008EF467 /* RNUserDefaults.m in Sources */,
 				CEC9D8242297C345008EF467 /* RCTConvert+Color.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
