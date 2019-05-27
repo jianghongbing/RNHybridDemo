@@ -38,6 +38,7 @@
 		2DF0FFEE2056DD460020B375 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3EA31DF850E9000B6D8A /* libReact.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
+		CE8B23E9229BDB7E000836E3 /* NativeEventEmitter.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8B23E8229BDB7E000836E3 /* NativeEventEmitter.m */; };
 		CEC9D81E22979611008EF467 /* RNVMyViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC9D81D22979611008EF467 /* RNVMyViewManager.m */; };
 		CEC9D8212297986E008EF467 /* MyView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC9D8202297986E008EF467 /* MyView.m */; };
 		CEC9D8242297C345008EF467 /* RCTConvert+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC9D8232297C345008EF467 /* RCTConvert+Color.m */; };
@@ -349,6 +350,8 @@
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
+		CE8B23E7229BDB7E000836E3 /* NativeEventEmitter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NativeEventEmitter.h; sourceTree = "<group>"; };
+		CE8B23E8229BDB7E000836E3 /* NativeEventEmitter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NativeEventEmitter.m; sourceTree = "<group>"; };
 		CEC9D81C22979611008EF467 /* RNVMyViewManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNVMyViewManager.h; sourceTree = "<group>"; };
 		CEC9D81D22979611008EF467 /* RNVMyViewManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNVMyViewManager.m; sourceTree = "<group>"; };
 		CEC9D81F2297986E008EF467 /* MyView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyView.h; sourceTree = "<group>"; };
@@ -635,6 +638,8 @@
 				CEC9D8232297C345008EF467 /* RCTConvert+Color.m */,
 				CEC9D8592297EB85008EF467 /* RNUserDefaults.h */,
 				CEC9D85A2297EB85008EF467 /* RNUserDefaults.m */,
+				CE8B23E7229BDB7E000836E3 /* NativeEventEmitter.h */,
+				CE8B23E8229BDB7E000836E3 /* NativeEventEmitter.m */,
 			);
 			name = MyView;
 			sourceTree = "<group>";
@@ -1152,6 +1157,7 @@
 			files = (
 				CEC9D8212297986E008EF467 /* MyView.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				CE8B23E9229BDB7E000836E3 /* NativeEventEmitter.m in Sources */,
 				CEC9D81E22979611008EF467 /* RNVMyViewManager.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 				CEC9D85B2297EB85008EF467 /* RNUserDefaults.m in Sources */,

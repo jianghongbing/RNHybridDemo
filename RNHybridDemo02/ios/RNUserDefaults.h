@@ -7,11 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-
 NS_ASSUME_NONNULL_BEGIN
 
 @interface RNUserDefaults : NSObject
-
 @end
 
 NS_ASSUME_NONNULL_END
