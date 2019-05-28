@@ -9,18 +9,32 @@
 import React, {Component} from 'react';
 import {StyleSheet, View, Alert, TouchableOpacity, Text, TextInput, NativeModules, NativeEventEmitter} from 'react-native';
 import MyView from './components/MyView'
-type Props = {};
+type Props = {}
+
 export default class App extends Component<Props> {
   constructor(props) {
     super(props)
     const userName = NativeModules.UserDefaults.userName
     this.state = {color: '#ddd', userName}
+    this._addListeners.bind(this)
+    this._removeListeners.bind(this)
+    this._queryUserName.bind(this)
   }
 
+
   componentDidMount() {
+    this._addListeners()
+    this._queryUserName()
+    this._loadData()
+  }
+
+  componentWillUnmount(){
+    this._removeListeners()
+  }
+
+  _addListeners() {
     const { IOSEventEmitter } = NativeModules
-    const nativeEventEmitter = new NativeEventEmitter(IOSEventEmitter);
-    console.log(IOSEventEmitter, nativeEventEmitter);
+    const nativeEventEmitter = new NativeEventEmitter(IOSEventEmitter)
     this.begin = nativeEventEmitter.addListener('begin_load_data', ()=>{
       Alert.alert('开始加载数据')
     })
@@ -31,7 +45,21 @@ export default class App extends Component<Props> {
     this.end = nativeEventEmitter.addListener('end_load_data', ()=>{
       Alert.alert('结束加载数据')
     })
-    console.log(this.begin, this.loading, this.end)
+  }
+  _removeListeners() {
+    this.begin.remove()
+    this.loading.remove()
+    this.end.remove()
+  }
+  _loadData() {
+    const userDefaults = NativeModules.UserDefaults
+    userDefaults.loadData().then(({data})=>{
+      Alert.alert(`data:${data}`)
+    }).catch(({code, message})=>{
+      Alert.alert(`error:${message}, code:${code}`)
+    })
+  }
+  _queryUserName() {
     const userDefaults = NativeModules.UserDefaults
     userDefaults.queryUserNameForKey('userName',(error, userName)=>{
       if (error) {
@@ -40,18 +68,6 @@ export default class App extends Component<Props> {
         this.setState({userName})
       }
     })
-
-    userDefaults.loadData().then(({data})=>{
-      Alert.alert(`data:${data}`)
-    }).catch(({code, message})=>{
-      Alert.alert(`error:${message}, code:${code}`)
-    })
-  }
-
-  componentWillUnmount(){
-    this.begin.remove()
-    this.loading.remove()
-    this.end.remove()
   }
 
   render() {

@@ -13,24 +13,20 @@
 static NSString * const BEGIN_LOAD_DATA_EVENT = @"begin_load_data";
 static NSString * const LOADING_DATA_EVENT = @"loading_data";
 static NSString * const END_LOAD_DATA_EVENT = @"end_load_data";
-@interface NativeEventEmitter()<RCTBridgeModule>
+static NSString * const kSendEventsToJS = @"com.jianghongbing.sendEventsToJS";
 
+@interface NativeEventEmitter()
+//+(void)emitEventWithName:(NSString *)name andPayload:(NSDictionary *)payload;
 @end
 
 @implementation NativeEventEmitter
 
+
+
 RCT_EXPORT_MODULE(IOSEventEmitter)
 
 RCT_EXPORT_METHOD(sendEvents) {
-  dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-    [self sendEventWithName:BEGIN_LOAD_DATA_EVENT body:@{}];
-  });
-  dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-    [self sendEventWithName:LOADING_DATA_EVENT body:nil];
-  });
-  dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-    [self sendEventWithName:END_LOAD_DATA_EVENT body:nil];
-  });
+  [[NSNotificationCenter defaultCenter] postNotificationName:kSendEventsToJS object:nil];
 }
 
 //事件相关
@@ -39,22 +35,31 @@ RCT_EXPORT_METHOD(sendEvents) {
   return @[BEGIN_LOAD_DATA_EVENT, LOADING_DATA_EVENT, END_LOAD_DATA_EVENT];
 }
 - (void)startObserving {
-  NSLog(@"method:%@", NSStringFromSelector(_cmd));
-
+  [self addObserver];
 }
 
 - (void)stopObserving {
-  NSLog(@"method:%@", NSStringFromSelector(_cmd));
-
+  [self removeObserver];
 }
 
-- (void)addListener:(NSString *)eventName {
-  NSLog(@"method:%@ evnetName:%@", NSStringFromSelector(_cmd), eventName);
-
+- (void)addObserver {
+  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(sendEventsToJS:) name:kSendEventsToJS object:nil];
 }
 
-- (void)removeListeners:(double)count {
-  NSLog(@"method:%@, count:%f", NSStringFromSelector(_cmd), count);
+- (void)removeObserver {
+  [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 
+- (void)sendEventsToJS:(NSNotification *)notification {
+  if ([notification.name isEqualToString:kSendEventsToJS]) {
+    [self sendEventWithName:BEGIN_LOAD_DATA_EVENT body:@{}];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+      [self sendEventWithName:LOADING_DATA_EVENT body:nil];
+    });
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+      [self sendEventWithName:END_LOAD_DATA_EVENT body:nil];
+    });
+  }
 }
 @end
