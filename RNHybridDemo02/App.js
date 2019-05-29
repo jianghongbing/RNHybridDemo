@@ -16,9 +16,9 @@ export default class App extends Component<Props> {
     super(props)
     const userName = NativeModules.UserDefaults.userName
     this.state = {color: '#ddd', userName}
-    this._addListeners.bind(this)
-    this._removeListeners.bind(this)
-    this._queryUserName.bind(this)
+    this._addListeners = this._addListeners.bind(this)
+    this._removeListeners = this._removeListeners.bind(this)
+    this._queryUserName = this._queryUserName.bind(this)
   }
 
 

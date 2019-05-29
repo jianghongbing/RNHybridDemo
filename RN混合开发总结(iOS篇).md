@@ -469,16 +469,64 @@ RN端简单实现如下:
   
 ```
 
-## 原生和RN交互中使用到的API
+## 原生和RN交互中常用到的API
 
 ### 原生端中的类和协议
 
-#### RCTBridgeModule
-#### RCTViewManager
-#### RCTEventManager
-#### RCTConvert
+#### RCTBridgeModule: 桥接原生模块的属性和方法到对应的RN模块中.
+
+1. RCT_EXPORT_MODULE: 导出模块名, 在RN使用的模块名, 如果没有给定的模块名, 就使用该类名作为模块名
+2. RCT_EXPORT_METHOD: 导出方法, 不带返回值的方法
+3. RCT_EXPORT_SYNCHRONOUS_TYPED_METHOD: 同步导出, 带有返回值方法
+4. RCT_REMAP_METHOD: 导出指定名称的方法
+5. requiresMainQueueSetup: 是否需要在主线程中,进行设置, 如重写了init方法, 要在该方法中返回YES.
+6. methodsToExport: 导出常量给RN模块
+7. methodQueue: 该模块方法执行的所在的线程, 默认是RN提供的一个线程,非主线程, 如果该模块所有的方法都在主线程中调用, 可以返回主线程给该属性
+
+#### RCTViewManager: 桥接原生视图的属性和方法到对应的RN组件中
+
+1. - (UIView *)view: RN组件中显示的视图
+2. RCT_EXPORT_VIEW_PROPERTY: 导出属性到RN组件中
+3. RCT_REMAP_VIEW_PROPERTY: 映射指定的keyPath的值作为对应的RN组件的属性
+4. RCT_CUSTOM_VIEW_PROPERTY: 导出自定义的属性到RN的组件中, 当RCTConvert中提供的方法不能将你的属性转换成RN的属性的类型的时候, 需要自定义自己的转换方法, 可以通过该方法来实现
+
+#### RCTEventManager: 发送原生事件给RN
+
+1. supportedEvents: 支持的事件, 该返回必须有返回值
+2. -(void)sendEventWithName:(NSString *)name body:(id)body: 从原生中发送事件到RN中
+3. startObserving: 当第一个观察者被添加进来时的回调
+4. stopObserving: 当最后一个观察者被移除时的回调
+5. -(void)addListener:(NSString *)eventName: 添加监听者的回调
+6. -(void)removeListeners:(double)count: 移除监听者的回调
+
+
+
+#### RCTConvert: 原生数据类型和JS数据类型之间的转换
+
+RCTConvert类中提供大量的方法, 将JS的数据类型转换成OC中的类型. 当该类中提供的方法不能满足自己的需求时,我们可以自定义自己的转换方法
 
 ### RN中的模块
+
+#### NativeModules
+
+所有在原生中导出的模块都被添加到该对象上, 作为它的一个属性.
+
+```jsx harmony
+import { NativeModules } from 'react-native'
+//下面这两种方式都可以获取原生模块
+// const MyModule = NativeModules.MyModule
+const { MyModule } = NativeModules
+
+```
+
+#### requireNativeComponent: 获取到原生组件, 一个函数
+
+```jsx harmony
+
+import { requireNativeComponents } from 'react-native'
+const MyView = requireNativeComponents('MyView')
+
+```
 
 
 
