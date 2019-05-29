@@ -485,7 +485,7 @@ RN端简单实现如下:
 
 #### RCTViewManager: 桥接原生视图的属性和方法到对应的RN组件中
 
-1. - (UIView *)view: RN组件中显示的视图
+1. -(UIView *)view: RN组件中显示的视图
 2. RCT_EXPORT_VIEW_PROPERTY: 导出属性到RN组件中
 3. RCT_REMAP_VIEW_PROPERTY: 映射指定的keyPath的值作为对应的RN组件的属性
 4. RCT_CUSTOM_VIEW_PROPERTY: 导出自定义的属性到RN的组件中, 当RCTConvert中提供的方法不能将你的属性转换成RN的属性的类型的时候, 需要自定义自己的转换方法, 可以通过该方法来实现

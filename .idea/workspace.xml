@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="798d5893-92d9-4666-9b34-5ecd2ee26d0b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/RNHybridDemo02/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/RNHybridDemo02/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RN混合开发总结(iOS篇).md" beforeDir="false" afterPath="$PROJECT_DIR$/RN混合开发总结(iOS篇).md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -19,65 +18,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/RN混合开发总结(iOS篇).md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SECOND">
-              <first_editor relative-caret-position="5037">
-                <caret line="163" column="2" selection-start-line="163" selection-start-column="2" selection-end-line="163" selection-end-column="2" />
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="11454">
+                <caret line="487" column="30" lean-forward="true" selection-start-line="487" selection-start-column="30" selection-end-line="487" selection-end-column="30" />
                 <folding>
                   <element signature="e#0#25#0" expanded="true" />
                 </folding>
               </first_editor>
               <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="69">
-                <caret line="3" column="14" lean-forward="true" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RNHybridDemo02/ios/NativeEventEmitter.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="8" selection-start-line="8" selection-end-line="64" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RNHybridDemo02/ios/NativeEventEmitter.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="12" column="47" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RNHybridDemo02/components/MyView.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="9" column="40" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="40" />
-              <folding>
-                <element signature="e#0#25#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RNHybridDemo02/App.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="16" column="34" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -181,18 +129,18 @@
       <updated>1559014819749</updated>
       <workItem from="1559014823555" duration="4161000" />
       <workItem from="1559024759696" duration="225000" />
-      <workItem from="1559025055238" duration="8498000" />
+      <workItem from="1559025055238" duration="8691000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12884000" />
+    <option name="totallyTimeSpent" value="13077000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="23" width="1920" height="996" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24960506" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24960506" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -205,7 +153,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="RNConsole" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32995495" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -350,9 +298,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/RN混合开发总结(iOS篇).md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SECOND">
-          <first_editor relative-caret-position="5037">
-            <caret line="163" column="2" selection-start-line="163" selection-start-column="2" selection-end-line="163" selection-end-column="2" />
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="11454">
+            <caret line="487" column="30" lean-forward="true" selection-start-line="487" selection-start-column="30" selection-end-line="487" selection-end-column="30" />
             <folding>
               <element signature="e#0#25#0" expanded="true" />
             </folding>
