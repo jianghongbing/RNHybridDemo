@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="798d5893-92d9-4666-9b34-5ecd2ee26d0b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/RN混合开发总结(iOS篇).md" beforeDir="false" afterPath="$PROJECT_DIR$/RN混合开发总结(iOS篇).md" afterDir="false" />
-    </list>
+    <list default="true" id="798d5893-92d9-4666-9b34-5ecd2ee26d0b" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -129,16 +127,15 @@
       <updated>1559014819749</updated>
       <workItem from="1559014823555" duration="4161000" />
       <workItem from="1559024759696" duration="225000" />
-      <workItem from="1559025055238" duration="8691000" />
+      <workItem from="1559025055238" duration="8912000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13077000" />
+    <option name="totallyTimeSpent" value="13298000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="23" width="1920" height="996" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24960506" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
